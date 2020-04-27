@@ -13,10 +13,6 @@ const Routes = () => {
             <PublicRoute path="/login" component={Login} />
             <PublicRoute path="/" component={Landing} exact />
             <PrivateRoute path="/app" component={Dashboard} />
-            {/* <PrivateRoute path="/dashboard" component={Dashboard} />
-            <PublicRoute path='/msg' component={DeactivationMessage} />
-            <PublicRoute path='/terms' component={TermsAndConditions} />
-            <PublicRoute path='/pageNotFound' component={PageNotFound} />
             <Redirect to='/pageNotFound' /> */}
         </Switch>
     );

@@ -5,7 +5,7 @@ const Dashboard = (props) => {
   return (
     <div className="container">
       <h1>
-        Loged user dashboarxd
+       Private route dashboard
       </h1>
     </div>)
 }

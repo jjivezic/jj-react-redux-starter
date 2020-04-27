@@ -9,6 +9,7 @@ import './index.css';
 import './index.css';
 import App from './App';
 import { store } from './_store/store';
+import './i18n';
 
 
 ReactDOM.render(
