@@ -1,6 +1,5 @@
 import React, { useEffect,Suspense } from 'react';
 import { Router } from 'react-router-dom';
-
 import './App.css';
 import { Routes } from './_routes/routes';
 import { history } from './_utils';
