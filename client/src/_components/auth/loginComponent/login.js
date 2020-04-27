@@ -1,8 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 //import { useHistory } from 'react-router-dom';
-import userService from '../../../_services/user.service';
-import { sessionService } from '../../../_sessionService/storage';
 import { userActions } from "../../../_store/actions/user.actions";
 
 const Login = () => {
@@ -43,7 +41,7 @@ const Login = () => {
     }
 
     const validateForm = () => {
-        return userData.email && userData.password.length > 3;
+        return userData.email && userData.password;
     }
 
     return (

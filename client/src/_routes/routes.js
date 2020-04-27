@@ -13,7 +13,7 @@ const Routes = () => {
             <PublicRoute path="/login" component={Login} />
             <PublicRoute path="/" component={Landing} exact />
             <PrivateRoute path="/app" component={Dashboard} />
-            <Redirect to='/pageNotFound' /> */}
+            {/* <Redirect to='/pageNotFound' /> */} */}
         </Switch>
     );
 };
