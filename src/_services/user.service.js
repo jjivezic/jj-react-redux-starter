@@ -2,9 +2,13 @@
 import httpService from './http.service';
 
 
-class userService {
+class UserService {
     async login(user) {
-        return httpService.apiRequest('post', 'user/login', user);
+        //return httpService.apiRequest('post', 'user/login', user);
+        return {
+            email:"Jelena",
+            token:"to79472hsf%#&hHFFOS"
+        }
     }
 
     async logout() {
@@ -26,4 +30,4 @@ class userService {
 
 }
 
-export default new userService();
+export default new UserService();
