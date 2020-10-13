@@ -1,12 +1,12 @@
 import React from "react";
 
-const Landing = (props) => {
+const Dashboard = () => {
   return (
     <div className="container">
       <h1>
-        Landing page
-</h1>
+       Private route dashboard
+      </h1>
     </div>)
 }
 
-export default Landing;
+export default Dashboard;

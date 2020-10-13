@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from 'react-redux';
-//import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { userActions } from "../../../_store/actions/user.actions";
 
 const Login = () => {
-    //const history = useHistory();
     const [error, setError] = useState(false);
-    //const loggingIn = useSelector(state => state.auth.loggingIn);
     const dispatch = useDispatch();
     const [userData, setUserData] = useState({
         email: "",
@@ -23,18 +20,6 @@ const Login = () => {
         e.preventDefault();
         if (validateForm()) {
             dispatch(userActions.login(userData));
-            // let response = await userService.login(userData);
-            // sessionService.create(response);
-           // setUser(sessionService.getUser());
-            // if (sessionService.isAuth()) {
-            //     if(response.user.isCompany){
-            //         history.push(`/dashboard/company/${response.user._id}`);
-            //     }else{
-            //         history.push("/dashboard/folder");
-            //     }
-              
-            //     toast.success("User is successfully loged !", toastOptions);
-            // }
         } else {
             setError(true);
         }

@@ -11,22 +11,22 @@ axios.interceptors.response.use((response) => {
     return Promise.reject(error)
     // }
 })
-const refreshToken = async (err) => {
-    let response = await apiRequest('get', 'user/token/refreshToken');
-    if (response) {
-        sessionService.updateUser(response);
-        let cutUrl = getRoute(err.config.url, '/', 3);
-        let url = err.config.url.slice(cutUrl + 1);
-        let data = (err.config.data ? JSON.parse(err.config.data) : null)
-        return await apiRequest(err.config.method, url, data);
-    } else {
-        _handleError(err);
-    }
-}
+// const refreshToken = async (err) => {
+//     let response = await apiRequest('get', 'user/token/refreshToken');
+//     if (response) {
+//         sessionService.updateUser(response);
+//         let cutUrl = getRoute(err.config.url, '/', 3);
+//         let url = err.config.url.slice(cutUrl + 1);
+//         let data = (err.config.data ? JSON.parse(err.config.data) : null)
+//         return await apiRequest(err.config.method, url, data);
+//     } else {
+//         _handleError(err);
+//     }
+// }
 
-const getRoute = (string, subString, index) => {
-    return string.split(subString, index).join(subString).length;
-}
+// const getRoute = (string, subString, index) => {
+//     return string.split(subString, index).join(subString).length;
+// }
 const apiRequest = async (method, apiUrl, body, headers) => {
     try {
         const apiToken = sessionService.getSessionToken()
