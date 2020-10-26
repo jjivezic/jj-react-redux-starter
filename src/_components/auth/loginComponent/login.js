@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
-import { userActions } from "../../../_store/actions/user.actions";
+import { loginSagas } from "../../../_store/sagas/login.saga";
 
 const Login = () => {
     const [error, setError] = useState(false);
@@ -19,7 +19,13 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
-            dispatch(userActions.login(userData));
+            let a = {
+                em: "test@gmail.com",
+                fn: "John",
+                ln: "Doe",
+                ty: 0,
+            }
+            dispatch(loginSagas.login(a));
         } else {
             setError(true);
         }
