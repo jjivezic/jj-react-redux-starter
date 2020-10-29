@@ -1,10 +1,10 @@
 
 const env = process.env.REACT_APP_ENVIROMENT;
 let url;
-let sourceUrl ='sdsdds';
-let googleApiKey='dssssssssssss';
+let sourceUrl ='someurl';
+let googleApiKey='keyfjfjkslskls';
 if (env === "prod") {
-    url = "https://prod..."
+    url = "https://productionUrl"
 } else {
     url = "http://localhost:9000/"
 }

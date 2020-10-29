@@ -6,7 +6,6 @@ import { sessionService } from '../../_sessionService/storage';
 import { history } from '../../_utils';
 
 export function* login(data) {
-  console.log('Hello LOGIN!', data)
   yield put(userActions.loginRequest())
   const { response, error } = yield call(userService.login, data)
   console.log('Response Login', response, error)
@@ -18,9 +17,11 @@ export function* login(data) {
     yield put(userActions.loginFailure(error));
   }
 }
+
 export function* hello() {
-  console.log('HELLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOoo')
+  console.log('HELLOOOOOOOOOO')
 }
+
 export function* watchLogin() {
   yield takeEvery(userConstants.LOGIN, login)
 }
@@ -29,9 +30,7 @@ export function* watchHello() {
 }
 
 
-export const loginSagas = [
-  // call(watchLogin),
-  // call(watchLogin2)
+export const authSagas = [
   watchLogin,
   watchHello
 ];

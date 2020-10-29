@@ -13,16 +13,16 @@ const Navbar = (props) => {
   const logout = () => {
     dispatch(userActions.logout());
   };
-  console.log('User***********************',store )
+  console.log('NAVBAR STORE***********************', store)
   return (
     <nav className="navbar navbar-expand-lg navbar-light ">
       <a className="navbar-brand" href="#">Navbar</a>
-
+      {store.auth.user && <h1>Hello {store.auth.user.client.fn}</h1>}
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
           <NavLink to="/" className="nav-link" >{t('navbar.link.home')}</NavLink>
         </li>
-        {store.auth.user &&  <li className="nav-item">
+        {store.auth.user && <li className="nav-item">
           <NavLink to="app" className="nav-link" >{t('navbar.link.dashboard')}</NavLink>
         </li>}
         <li className="nav-item">
@@ -32,8 +32,8 @@ const Navbar = (props) => {
           <a className="nav-link" href="#">Register</a>
         </li> */}
         <li className="nav-item">
-        {store.auth.user && <a className="nav-link" href="#" onClick={logout}>Logout</a>}
-      </li>
+          {store.auth.user && <a className="nav-link" href="#" onClick={logout}>Logout</a>}
+        </li>
       </ul>
       <ul className="">
         <div className="lng-link dash-navbar-mobile">

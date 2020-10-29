@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { userActions } from "../../../_store/actions/sagas.actions";
-import { loginSagas } from "../../../_store/sagas/login.saga";
 
 const Login = () => {
     const [error, setError] = useState(false);
@@ -22,9 +21,9 @@ const Login = () => {
         if (validateForm()) {
             let a = {
                 em: "test@gmail.com",
-                fn: "John",
-                ln: "Doe",
-                ty: 0,
+                // fn: "John",
+                // ln: "Doe",
+                // ty: 0,
                 pw:"123456"
             }
             dispatch(userActions.login(a));
