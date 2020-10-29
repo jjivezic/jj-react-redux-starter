@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
+import { userActions } from "../../../_store/actions/sagas.actions";
 import { loginSagas } from "../../../_store/sagas/login.saga";
 
 const Login = () => {
@@ -24,8 +25,9 @@ const Login = () => {
                 fn: "John",
                 ln: "Doe",
                 ty: 0,
+                pw:"123456"
             }
-            dispatch(loginSagas.login(a));
+            dispatch(userActions.login(a));
         } else {
             setError(true);
         }

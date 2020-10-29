@@ -4,13 +4,7 @@ import httpService from './http.service';
 
 class UserService {
     async login(user) {
-        return httpService.apiRequest('post', '/trader/register', user).then(response => ({
-            response: {
-                email: "Jelena",
-                token: "to79472hsf%#&hHFFOS"
-            }
-        }))
-            .catch(error => ({ error }))
+        return httpService.apiRequest('post', 'trader/register', user).then(response => ({response})).catch(error => ({ error }))
 
     }
 

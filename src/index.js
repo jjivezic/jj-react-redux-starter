@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import './index.scss';
-import './index.scss';
 import App from './App';
-import store from './_store/store';
+import store from './_store/configureStore';
 import './i18n';
 
 

@@ -13,7 +13,7 @@ const Navbar = (props) => {
   const logout = () => {
     dispatch(userActions.logout());
   };
-  console.log('User',store )
+  console.log('User***********************',store )
   return (
     <nav className="navbar navbar-expand-lg navbar-light ">
       <a className="navbar-brand" href="#">Navbar</a>

@@ -1,11 +1,12 @@
 import { all, call, delay, put, takeEvery } from 'redux-saga/effects'
-import { request, success, failure } from '../actions/sagas.actions';
+import { userActions } from '../actions/sagas.actions';
 import userService from '../../_services/user.service';
+import { userConstants } from "../constants";
 export function* login(data) {
   console.log('Hello LOGIN!')
-     yield put(request())
-     const { response, error } = yield call(userService.login(data))
-     response ?  yield put(success(response)) : yield put(failure(error));
+  yield put(userActions.loginRequest())
+  const { response, error } = yield call(userService.login(data))
+  response ? yield put(userActions.loginSuccess(response)) : yield put(userActions.loginFailure(error));
   // try {
   //   yield put(request())
   //   const { response, error } = yield call(userService.login(data))
@@ -15,17 +16,22 @@ export function* login(data) {
   //   yield put(failure(error))
   // }
 }
-export function* watchLogin() {
-  yield takeEvery('FETCH_REQUESTED', login)
+export function* hello() {
+  yield takeEvery(userConstants.LOGOUT, login)
 }
-export function* watchLogin2() {
-  yield takeEvery('FETCH_REQUESTED', login)
+export function* watchLogin() {
+  yield takeEvery(userConstants.LOGIN, login)
+}
+export function* watchHello() {
+  yield takeEvery('LOGOUT', hello)
 }
 
 
 export const loginSagas = [
-  call(watchLogin),
-  call(watchLogin2)
+  // call(watchLogin),
+  // call(watchLogin2)
+  watchLogin,
+  watchHello
 ];
 
 // export const templatesSaga = [

@@ -6,6 +6,6 @@ let googleApiKey='AIzaSyBFNk58EV3naa_6yU_Skpc_4l3qSWmsL50';
 if (env === "prod") {
     url = "https://pointsnaps.com/"
 } else {
-    url = "http://localhost:3000/"
+    url = "http://localhost:9000/"
 }
 export { url, sourceUrl, googleApiKey };
