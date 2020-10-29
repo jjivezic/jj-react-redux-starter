@@ -16,10 +16,10 @@ const loginFailure = (error) => {
 //   return { type: userConstants.FETCHED_USER}
 // };
 
-const login = (user) => {
+const login = (payload) => {
   return {
     type: userConstants.LOGIN,
-    user
+    ...payload
   }
 };
 

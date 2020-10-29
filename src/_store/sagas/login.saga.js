@@ -3,21 +3,14 @@ import { userActions } from '../actions/sagas.actions';
 import userService from '../../_services/user.service';
 import { userConstants } from "../constants";
 export function* login(data) {
-  console.log('Hello LOGIN!')
+  console.log('Hello LOGIN!',data)
   yield put(userActions.loginRequest())
-  const { response, error } = yield call(userService.login(data))
+  const { response, error } = yield call(userService.login,data)
+  console.log('Response Login',response,error)
   response ? yield put(userActions.loginSuccess(response)) : yield put(userActions.loginFailure(error));
-  // try {
-  //   yield put(request())
-  //   const { response, error } = yield call(userService.login(data))
-  //   //let responese = userService.login(data)
-  //   yield put(success(responese))
-  // } catch (error) {
-  //   yield put(failure(error))
-  // }
 }
 export function* hello() {
-  yield takeEvery(userConstants.LOGOUT, login)
+console.log('HELLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOoo')
 }
 export function* watchLogin() {
   yield takeEvery(userConstants.LOGIN, login)
@@ -33,9 +26,3 @@ export const loginSagas = [
   watchLogin,
   watchHello
 ];
-
-// export const templatesSaga = [
-//   takeLatest('GET_AP_TEMPLATES', pushTemplatesToStore),
-//   takeLatest('ADD_NEW_TEMPLATE', addNewTemplateToStore),
-//   takeEvery('LOAD_TEMPLATE_OBJECT', addTemplateObjectToStore),
-// ];
