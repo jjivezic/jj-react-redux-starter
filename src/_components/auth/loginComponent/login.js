@@ -24,9 +24,12 @@ const Login = () => {
                 // fn: "John",
                 // ln: "Doe",
                 // ty: 0,
-                pw:"123456"
+                pw: "123456"
             }
-            dispatch(authActions.login(a));
+            let res = await dispatch(authActions.login(a));
+            console.log(
+                'Response login??????????',res
+            )
         } else {
             setError(true);
         }

@@ -1,11 +1,9 @@
 
-import React from 'react'
-import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { createLogger } from 'redux-logger';
 import rootReducer from './reducers';
-import rootSaga from './sagas/sagas';
+import rootSaga from './sagas/rootSaga';
 
 const loggerMiddleware = createLogger();
 const sagaMiddleware = createSagaMiddleware();
