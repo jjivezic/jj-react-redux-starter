@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
-import { userActions } from "../../../_store/actions/sagas.actions";
+import { authActions } from "../../../_store/actions/auth.actions";
 
 const Login = () => {
     const [error, setError] = useState(false);
@@ -26,7 +26,7 @@ const Login = () => {
                 // ty: 0,
                 pw:"123456"
             }
-            dispatch(userActions.login(a));
+            dispatch(authActions.login(a));
         } else {
             setError(true);
         }

@@ -1,12 +1,12 @@
-import { userConstants } from '../constants';
+import { otherConstants } from '../constants';
 
 export const others = (state = {}, action) => {
   switch (action.type) {
-    case userConstants.OTHER_REQUEST:
+    case otherConstants.OTHER_REQUEST:
       return state;
-    case userConstants.OTHER_SUCCESS:
+    case otherConstants.OTHER_SUCCESS:
       return state;
-    case userConstants.OTHER_FAILURE:
+    case otherConstants.OTHER_FAILURE:
       return state;
     default:
       return state

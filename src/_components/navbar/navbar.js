@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { userActions } from "../../_store/actions/user.actions";
+import { authActions } from "../../_store/actions/auth.actions";
 import LanguageSelector from "../language/languageSelector";
 
 
@@ -11,7 +11,7 @@ const Navbar = (props) => {
   const dispatch = useDispatch();
   const store = useSelector(state => state);
   const logout = () => {
-    dispatch(userActions.logout());
+    dispatch(authActions.logout());
   };
   console.log('NAVBAR STORE***********************', store)
   return (
