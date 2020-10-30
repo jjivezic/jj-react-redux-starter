@@ -26,10 +26,8 @@ const Login = () => {
                 // ty: 0,
                 pw: "123456"
             }
-            let res = await dispatch(authActions.login(a));
-            console.log(
-                'Response login??????????',res
-            )
+           dispatch(authActions.login(a));
+      
         } else {
             setError(true);
         }
