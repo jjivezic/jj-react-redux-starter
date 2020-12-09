@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { userActions } from "../../_store/actions/user.actions";
 import LanguageSelector from "../language/languageSelector";
-
+import './navbar.scss';
 
 const Navbar = (props) => {
   const { t } = useTranslation();
@@ -13,30 +13,26 @@ const Navbar = (props) => {
   const logout = () => {
     dispatch(userActions.logout());
   };
-  console.log('User',store )
+  console.log('STORE', store)
   return (
-    <nav className="navbar navbar-expand-lg navbar-light ">
-      <a className="navbar-brand" href="#">Navbar</a>
-
-      <ul className="navbar-nav mr-auto">
-        <li className="nav-item active">
-          <NavLink to="/" className="nav-link" >{t('navbar.link.home')}</NavLink>
+    <nav>
+      <h3>JJ Cordiaca STARTER</h3>
+      <ul>
+        <li>
+          <NavLink to="/" >{t('navbar.link.home')}</NavLink>
         </li>
-        {store.auth.user &&  <li className="nav-item">
-          <NavLink to="app" className="nav-link" >{t('navbar.link.dashboard')}</NavLink>
+        {store.auth.user && <li>
+          <NavLink to="app">{t('navbar.link.dashboard')}</NavLink>
         </li>}
-        <li className="nav-item">
-          <NavLink to="login" className="nav-link" >{t('navbar.link.login')}</NavLink>
+        <li >
+          <NavLink to="login" >{t('navbar.link.login')}</NavLink>
         </li>
-        {/* <li className="nav-item">
-          <a className="nav-link" href="#">Register</a>
-        </li> */}
-        <li className="nav-item">
-        {store.auth.user && <a className="nav-link" href="#" onClick={logout}>Logout</a>}
-      </li>
+        <li>
+          {store.auth.user && <a href="#" onClick={logout}>Logout</a>}
+        </li>
       </ul>
-      <ul className="">
-        <div className="lng-link dash-navbar-mobile">
+      <ul>
+        <div className="lng-Link">
           <LanguageSelector />
         </div>
       </ul>

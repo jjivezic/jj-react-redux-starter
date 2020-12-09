@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: $font-primary;
+  height: 100%;
+  margin: 0;
+  color: $white;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-size: 16px;
+  background: $bg-primary;
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  :active {
+    color: $link-hover;
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+}

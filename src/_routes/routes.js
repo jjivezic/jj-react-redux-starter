@@ -3,17 +3,16 @@ import { Switch, Redirect } from "react-router-dom";
 
 import { PublicRoute } from "./publicRoute";
 import { PrivateRoute } from "./privateRoute";
-import Landing from "../_components/landing/landing";
+import Landing from "../_pages/landing/landing";
 import Login from "../_components/auth/loginComponent/login";
-import Dashboard from "../_components/dashboard/dashboard";
+import Dashboard from "../_pages/dashboard/dashboard";
 
 const Routes = () => {
     return (
         <Switch>
+            <PublicRoute exact path="/" component={Landing} />
             <PublicRoute path="/login" component={Login} />
-            <PublicRoute path="/" component={Landing} exact />
             <PrivateRoute path="/app" component={Dashboard} />
-            {/* <Redirect to='/pageNotFound' /> */} */}
         </Switch>
     );
 };

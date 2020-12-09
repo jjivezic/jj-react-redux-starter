@@ -1,0 +1,28 @@
+@import "../../_styles/variables";
+
+nav {
+  background: $lightGray;
+  background: $bg-secondary;
+  padding: 10px;
+  text-align: center;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      padding: 0 10px;
+    }
+  }
+
+  .active {
+    color: $link-active;
+
+  }
+
+  h3 {
+    margin: 0;
+
+  }
+}

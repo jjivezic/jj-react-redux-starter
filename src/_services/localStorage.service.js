@@ -1,4 +1,4 @@
-export const sessionService = {
+export const localStorageService = {
 
   create(user) {
     delete user.user.password;

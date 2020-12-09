@@ -1,0 +1,26 @@
+.container-wrapper {
+  padding: 0 24px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+.container-fluid-wrapper {
+  width: 100%;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+  .container-wrapper {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .container-wrapper {
+    padding: 0px;
+    max-width: 1160px;
+  }
+}
+

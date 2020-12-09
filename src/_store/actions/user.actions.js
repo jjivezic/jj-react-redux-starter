@@ -1,12 +1,13 @@
-import { userConstants } from '../constants';
+import { authConstants } from '../constants';
 import UserService from '../../_services/user.service';
 import { history } from '../../_utils';
-import { sessionService } from '../../_sessionService/storage';
+import { localStorageService } from '../../_services/localStorage.service';
+
 
 const login = (data) => {
-  const request = () => { return { type: userConstants.LOGIN_REQUEST }; };
-  const success = (user) => { return { type: userConstants.LOGIN_SUCCESS, user }; };
-  const failure = (error) => { return { type: userConstants.LOGIN_FAILURE, error }; };
+  const request = () => { return { type: authConstants.LOGIN_REQUEST }; };
+  const success = (user) => { return { type: authConstants.LOGIN_SUCCESS, user }; };
+  const failure = (error) => { return { type: authConstants.LOGIN_FAILURE, error }; };
 
   return dispatch => {
     dispatch(request());
@@ -15,7 +16,7 @@ const login = (data) => {
         user => {
           if (user) {
             dispatch(success(user));
-            sessionService.set('user', JSON.stringify(user));
+            localStorageService.set('user', JSON.stringify(user));
             history.push('/app');
             return user;
           }
@@ -28,10 +29,10 @@ const login = (data) => {
 };
 
 const logout = () => {
-  sessionService.destroy('user');
+  localStorageService.destroy('user');
   sessionStorage.clear();
   history.push('/');
-  return { type: userConstants.LOGOUT };
+  return { type: authConstants.LOGOUT };
 };
 
 export const userActions = {

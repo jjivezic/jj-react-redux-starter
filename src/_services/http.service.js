@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { sessionService } from '../_sessionService/storage';
+import { localStorageService } from './localStorage.service';
 import { url } from '../environment';
 
 axios.interceptors.response.use((response) => {
@@ -29,8 +29,8 @@ axios.interceptors.response.use((response) => {
 // }
 const apiRequest = async (method, apiUrl, body, headers) => {
     try {
-        const apiToken = sessionService.getSessionToken()
-        const refreshToken = sessionService.getSessionRefreshToken()
+        const apiToken = localStorageService.getSessionToken()
+        const refreshToken = localStorageService.getSessionRefreshToken()
         const requestHeaders = (!headers) ? {} : headers
         if (apiToken) requestHeaders['x-access-token'] = apiToken;
         if (refreshToken) requestHeaders['x-refresh-access-token'] = refreshToken;
@@ -54,7 +54,7 @@ const outsideRequest = async (method, url, body, headers) => {
 const _handleError = async (err) => {
     if (err && err.response) {
         if (err.response.status === 403) {
-            sessionService.destroy();
+            localStorage.destroy();
             window.location.replace('/');
         }
         let errorText;

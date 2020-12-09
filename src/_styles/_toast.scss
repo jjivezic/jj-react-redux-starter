@@ -1,0 +1,40 @@
+// React toast
+.toast {
+  z-index: 999999999 !important;
+  margin-right: 10px;
+
+}
+
+.toast-wrapper {
+  border-radius: 6px;
+  padding-left: 13px;
+  font-family: "Arial";
+  font-size: medium;
+}
+
+// .Toastify__progress-bar {
+//   height: 2px;
+//   background-color: $lighterPurple;
+// }
+
+// .Toastify__close-button {
+//   color: $darkPurple;
+// }
+
+// .Toastify__toast--success {
+//   background: $cyan;
+//   color: $darkPurple;
+//   border: 1px solid $darkPurple;
+// }
+
+// .Toastify__toast--error {
+//   background: #ff4d4d;
+//   .Toastify__close-button {
+//     color: $white;
+//   }
+// }
+
+// .Toastify__toast--warning {
+//   background: $white;
+//   color: $purple;
+// }
