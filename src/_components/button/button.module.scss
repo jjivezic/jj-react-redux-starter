@@ -1,0 +1,102 @@
+@import "../../_styles/variables";
+
+
+.btn {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5ms;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:hover {
+    transition: 0.5ms;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    outline: none;
+  }
+
+  &:hover,
+  &:active {
+    &:not([disabled]) {
+      filter: brightness(95%);
+    }
+  }
+}
+
+.sm {
+  @extend .btn;
+  height: 25px;
+  padding: 0 15px;
+
+  span {
+    font-size: small;
+  }
+}
+
+.md {
+  @extend .btn;
+  height: 40px;
+  padding: 0 15px;
+
+  span {
+    font-size: medium;
+  }
+}
+
+.basic {
+  border-radius: 5px;
+}
+
+.rounded {
+  border-radius: 30px;
+}
+
+.cube {
+  border-radius: 0;
+}
+
+.iconLeft {
+  margin-right: 5px;
+}
+
+.iconRight {
+  margin-left: 5px;
+}
+
+.primary {
+  background: $btn-primary;
+
+  span {
+    color: $btn-primary-color;
+  }
+
+  i {
+    color: $btn-primary-color;
+  }
+
+  &:hover {
+    background: darken($btn-primary, 5%);
+  }
+}
+
+.secondary {
+  background: $btn-secondary;
+
+  span {
+    color: $btn-secondary-color;
+  }
+
+  i {
+    color: $btn-secondary-color;
+  }
+
+  &:hover {
+    background: darken($btn-secondary, 5%);
+  }
+}

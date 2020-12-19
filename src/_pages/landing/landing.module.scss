@@ -1,8 +1,35 @@
-.wrapper{
+.wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
-  h2{
+  padding: 2% 5%;
+
+  h2 {
     text-transform: uppercase;
   }
+}
+
+.modalsVariations {
+  button {
+    margin-right: 10px;
+  }
+}
+
+.buttonsVariations {
+  h3 {
+    margin-top: 20px;
+  }
+
+  .btnGroup {
+    margin-bottom: 20px;
+  }
+
+  .btns {
+    margin-top: 10px;
+
+    button {
+      margin-right: 10px;
+    }
+  }
+
 }

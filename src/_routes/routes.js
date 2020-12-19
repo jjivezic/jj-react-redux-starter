@@ -3,9 +3,9 @@ import { Switch, Redirect } from "react-router-dom";
 
 import { PublicRoute } from "./publicRoute";
 import { PrivateRoute } from "./privateRoute";
-import Landing from "../_pages/landing/landing";
-import Login from "../_components/auth/loginComponent/login";
-import Dashboard from "../_pages/dashboard/dashboard";
+import Landing from "../_pages/landing";
+import Login from "../_pages/auth/login";
+import Dashboard from "../_pages/dashboard";
 
 const Routes = () => {
     return (

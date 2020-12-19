@@ -1,0 +1,21 @@
+@import "../../_styles/variables";
+
+.wrapper {
+  width: 100%;
+  margin: 20px 0;
+  h2 {
+    color: $color-secondary;
+  }
+
+  p {
+    color: $color-text;
+  }
+
+  .content {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap
+  }
+
+  ;
+}

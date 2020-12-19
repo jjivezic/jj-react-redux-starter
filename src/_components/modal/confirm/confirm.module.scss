@@ -1,0 +1,102 @@
+@import '../../../_styles/variables';
+
+.customModal {
+  position: absolute;
+  top: 50px;
+  margin-bottom: 50px;
+  border: none;
+  background: #181c3a;
+
+  border-radius: 6px;
+  outline: none;
+  z-index: 99999;
+  width: 85%;
+
+}
+
+.customOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(5, 16, 20, 0.53);
+  z-index: 99999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.sm {
+  max-width: 300px;
+}
+
+.md {
+  max-width: 500px;
+}
+
+.lg {
+  max-width: 700px;
+}
+
+.xlg {
+  max-width: 1200px;
+}
+
+.modalBody {
+  padding: 25px;
+  position: relative;
+
+  .scrollWrapper {
+    // width: 100%;
+    //max-height: 600px;
+  }
+
+  .title {
+    text-align: center;
+    padding: 21px 0;
+
+  }
+}
+
+.close {
+  position: absolute;
+  right: 13px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 99999;
+
+  i {
+    color: $color-secondary;
+    font-size: large;
+  }
+}
+
+.modalFooter {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+
+  button {
+    margin: 10px;
+  }
+
+
+}
+
+.modalYesNo {
+  .title {
+    font-weight: normal;
+    text-transform: initial;
+
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .modalBody {
+    padding: 32px;
+  }
+}
+
