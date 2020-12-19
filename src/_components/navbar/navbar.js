@@ -16,17 +16,17 @@ const Navbar = (props) => {
   console.log('STORE', store)
   return (
     <nav>
-      <h3>JJ Cordiaca STARTER</h3>
+      <h3>STARTER</h3>
       <ul>
         <li>
-          <NavLink to="/" >{t('navbar.link.home')}</NavLink>
+          <NavLink exact to="/" >{t('navbar.link.home')}</NavLink>
         </li>
         {store.auth.user && <li>
-          <NavLink to="app">{t('navbar.link.dashboard')}</NavLink>
+          <NavLink to="/app">{t('navbar.link.dashboard')}</NavLink>
         </li>}
-        <li >
-          <NavLink to="login" >{t('navbar.link.login')}</NavLink>
-        </li>
+        {!store.auth.user && <li>
+          <NavLink to="/login" >{t('navbar.link.login')}</NavLink>
+        </li>}
         <li>
           {store.auth.user && <a href="#" onClick={logout}>Logout</a>}
         </li>

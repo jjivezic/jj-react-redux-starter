@@ -16,7 +16,7 @@ const login = (data) => {
         user => {
           if (user) {
             dispatch(success(user));
-            localStorageService.set('user', JSON.stringify(user));
+            localStorageService.set('user', user);
             history.push('/app');
             return user;
           }

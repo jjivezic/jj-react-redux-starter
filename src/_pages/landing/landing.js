@@ -16,8 +16,7 @@ const Landing = () => {
   }
   return (
     <div className={styles.wrapper}>
-      <h2>Starter JJ </h2>
-      <h2>Basic starter with redux thung or saga,modules scss,translations,modal </h2>
+      <h2>LANDING </h2>
       <button onClick={openModal}>Open modal</button>
     </div>)
 }

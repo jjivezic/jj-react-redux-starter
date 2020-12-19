@@ -12,6 +12,7 @@ const appReducer = combineReducers({
 });
 
 const rootReducer = (state, action) => {
+  //reset store to initial state
     if (action.type === authConstants.LOGOUT) {
         state = undefined
     }

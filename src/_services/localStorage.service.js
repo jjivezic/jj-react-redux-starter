@@ -1,9 +1,5 @@
 export const localStorageService = {
 
-  create(user) {
-    delete user.user.password;
-    localStorage.setItem('user', JSON.stringify(user));
-  },
 
   destroy(type) {
     localStorage.removeItem(type);
