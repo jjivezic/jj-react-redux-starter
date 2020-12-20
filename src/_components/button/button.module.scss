@@ -6,7 +6,9 @@
   cursor: pointer;
   outline: none;
   transition: 0.5ms;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:focus,
   &:active {
     outline: none;
@@ -14,53 +16,90 @@
 
   &:hover {
     transition: 0.5ms;
+
   }
 
   &:disabled {
     cursor: not-allowed;
     outline: none;
-  }
-
-  &:hover,
-  &:active {
-    &:not([disabled]) {
-      filter: brightness(95%);
-    }
+    filter: brightness(50%);
   }
 }
 
+// Size
 .sm {
   @extend .btn;
-  height: 25px;
+  height:$btn-sm-height;
   padding: 0 15px;
 
   span {
-    font-size: small;
+    font-size: $btn-sm-fontSize;
+  }
+
+  i {
+    font-size: $btn-sm-icon-fontSize;
   }
 }
 
 .md {
   @extend .btn;
-  height: 40px;
+  height:$btn-md-height;
   padding: 0 15px;
 
   span {
-    font-size: medium;
+    font-size: $btn-md-fontSize;
+  }
+
+  i {
+    font-size: $btn-md-icon-fontSize;
   }
 }
+.lg {
+  @extend .btn;
+  height:$btn-lg-height;
+  padding: 0 15px;
 
+  span {
+    font-size: $btn-lg-fontSize;
+  }
+
+  i {
+    font-size: $btn-lg-icon-fontSize;
+  }
+}
+// Border
+.br {
+  &__1px {
+    @extend .br;
+    border: 1px solid;
+  }
+
+  &__2px {
+    @extend .br;
+    border: 2px solid;
+  }
+
+  &__3px {
+    @extend .br;
+    border: 3px solid;
+  }
+
+}
+
+// Variations
 .basic {
-  border-radius: 5px;
+  border-radius: $btn-basic-radius;
 }
 
 .rounded {
-  border-radius: 30px;
+  border-radius: $btn-rounded-radius;
 }
 
 .cube {
   border-radius: 0;
 }
 
+// Icons 
 .iconLeft {
   margin-right: 5px;
 }
@@ -69,34 +108,75 @@
   margin-left: 5px;
 }
 
-.primary {
-  background: $btn-primary;
+// Button types
+.default {
+  background: $btn-default-bg;
 
   span {
-    color: $btn-primary-color;
+    color: $btn-default-color;
+    // font-size: $btn-default-fontSize;
   }
 
   i {
-    color: $btn-primary-color;
+    color: $btn-default-icon-color;
+    //font-size: $btn-default-icon-fontSize;
   }
 
   &:hover {
-    background: darken($btn-primary, 5%);
+    &:not([disabled]) {
+      background: darken($btn-default-bg, 5%);
+    }
+  }
+
+  &.br {
+    border-color: $btn-default-br-color;
+  }
+}
+
+.primary {
+  background: $btn-primary-bg;
+
+  span {
+    color: $btn-primary-color;
+    // font-size: $btn-primary-fontSize;
+  }
+
+  i {
+    color: $btn-primary-icon-color;
+    //  font-size: $btn-primary-icon-fontSize;
+  }
+
+  &:hover {
+    &:not([disabled]) {
+      background: darken($btn-primary-bg, 5%);
+    }
+  }
+
+  &.br {
+    border-color: $btn-primary-br-color;
   }
 }
 
 .secondary {
-  background: $btn-secondary;
+  background: $btn-secondary-bg;
 
   span {
     color: $btn-secondary-color;
+    //font-size: $btn-secondary-fontSize;
   }
 
   i {
-    color: $btn-secondary-color;
+    color: $btn-secondary-icon-color;
+    // font-size: $btn-secondary-icon-fontSize;
   }
 
   &:hover {
-    background: darken($btn-secondary, 5%);
+    &:not([disabled]) {
+      background: darken($btn-secondary-bg, 5%);
+    }
+  }
+
+  &.br {
+    border-color: $btn-secondary-br-color;
   }
 }

@@ -4,7 +4,6 @@ $lightGray:#dfdfdf;
 $black-russian: #090d28;
 $black-russian-opacity: rgba(9, 13, 40, 0.65);
 $grayish-navy: #181c3a;
-$grayish-navy-opacity:rgba(24, 28, 58, 0.65);
 $waikawa-grey: #646b9b;
 $blue-violet: #8d29ff;
 $pastel-green: #00c84a;
@@ -19,39 +18,61 @@ $Bali-Hai: #8f9bb3;
 
 $bg-primary: $black-russian;
 $bg-secondary: $grayish-navy;
-$bg-secondary-opacity:$grayish-navy-opacity;
-$bg-secondary-darker: $midnight-express;
-$bg-colored: $pastel-green;
-$bg-violet: $blue-violet;
+$bg-bright:$pastel-green;
+$bg-light:$lightGray;
 
 $color-primary: $white;
 $color-secondary: $pastel-green;
-$color-neutral: $waikawa-grey;
-$color-violet: $blue-violet;
+$color-bright:$blue-violet;
+$color-neutral:$waikawa-grey;
 $color-text: $Bali-Hai;
-// $color-text: $white;
+$color-grey: $grayish-navy;
 
-$link: $waikawa-grey;
-$link-hover: $pastel-green;
-$link-active: $pastel-green;
+//Links
+$link: $color-neutral;
+$link-hover: $color-secondary;
+$link-active:$color-secondary;
 
-$btn-primary: $pastel-green;
-$btn-primary-shadow: $fun-green;
-$btn-primary-active: $zuccini;
-$btn-primary-color: $white;
-$btn-secondary: $waikawa-grey;
-$btn-secondary-color: $white;
-$btn-dark: $bg-secondary;
-$btn-black: $bg-primary;
-$btn-bright: $blue-violet;
+// BUTTONS - primary,secondary, default
+$btn-sm-height:30px;
+$btn-md-height:40px;
+$btn-lg-height:50px;
+$btn-sm-fontSize:small;
+$btn-md-fontSize:medium;
+$btn-lg-fontSize:large;
+$btn-sm-icon-fontSize:small;
+$btn-md-icon-fontSize:medium;
+$btn-lg-icon-fontSize:large;
+$btn-rounded-radius:30px;
+$btn-basic-radius:5px;
 
-$input-bg: $black-russian;
-$input-color: $white;
-$input-placeholder: $waikawa-grey;
-$input-active-border: $blue-violet;
+$btn-primary-bg: $bg-bright;
+$btn-primary-color: $color-primary;
+$btn-primary-fontSize: medium;
+$btn-primary-icon-color: $color-primary;
+$btn-primary-icon-fontSize: small;
+$btn-primary-br-color: $color-primary;
 
+$btn-secondary-bg: $blue-violet;
+$btn-secondary-color:$color-primary;
+$btn-secondary-fontSize: medium;
+$btn-secondary-icon-color: $color-primary;
+$btn-secondary-icon-fontSize: small;
+$btn-secondary-br-color:$color-primary;
+
+$btn-default-bg: $bg-light;
+$btn-default-color:$color-grey;
+$btn-default-fontSize: medium;
+$btn-default-icon-color:$color-grey;
+$btn-default-icon-fontSize: small;
+$btn-default-br-color: $color-grey;
+
+// modals
+$modal-bg: $bg-secondary;
+$modal-overlay-bg: rgba(5, 16, 20, 0.53);
+$modal-text-color: $color-bright;
+
+//Fonts
 $font-primary: "Arial";
 $font-primary-bold: "Arial";
 $font-secondary: "Arial-Black";
-
-

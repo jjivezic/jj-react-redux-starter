@@ -1,11 +1,11 @@
-@import '../../../_styles/variables';
+@import '../../_styles/variables';
 
 .customModal {
   position: absolute;
   top: 50px;
   margin-bottom: 50px;
   border: none;
-  background: #181c3a;
+  background: $modal-bg;
 
   border-radius: 6px;
   outline: none;
@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(5, 16, 20, 0.53);
+  background-color: $modal-overlay-bg;
   z-index: 99999999;
   display: flex;
   align-items: center;
@@ -49,8 +49,8 @@
   position: relative;
 
   .scrollWrapper {
-    // width: 100%;
-    //max-height: 600px;
+    width: 100%;
+    max-height: 600px;
   }
 
   .title {
@@ -68,7 +68,7 @@
   z-index: 99999;
 
   i {
-    color: $color-secondary;
+    color: $modal-text-color;
     font-size: large;
   }
 }

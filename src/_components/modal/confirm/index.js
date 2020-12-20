@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
-import styles from './confirm.module.scss';
+import styles from '../modal.module.scss';
 import Button from '../../button';
 
 const ConfirmModal = ({ show, handleSubmit, modalData, question }) => {
